@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dettaglio Libro</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td><b>Titolo: </b></td>
+            <td th:text="${libro.titolo}"></td>
+        </tr>
+        <tr>
+            <td><b>Autore: </b></td>
+            <td th:text="${libro.autore}"></td>
+        </tr>
+        <tr>
+            <td><b>Prezzo: </b></td>
+            <td th:text="${libro.prezzo} + '€'"></td>
+        </tr>
+        <tr>
+            <td><b>Anno di pubblicazione: </b></td>
+            <td th:text="${libro.annoPubblicazione}"></td>
+        </tr>
+        <tr>
+            <td><b>Utente: </b></td>
+            <td th:text="${libro.utente.username}"></td>
+        </tr>
+        <tr th:if="${proprietario}">
+            <form method="post" th:action="@{'/libro/rimuovi/' + ${libro.getId()}}">
+                <button type="submit">Elimina</button>
+            </form>
+        </tr>
+    </table>
+</body>
+</html>

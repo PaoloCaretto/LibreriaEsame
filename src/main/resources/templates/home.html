@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+    <h1>Homepage Libreria Caretto</h1>
+    <a href="/libri/tuttiLibri">Vedi tutti i libri</a><br>
+    <a href="/libri/mieiLibri">Vedi i tuoi libri</a><br>
+    <a href="/libri/aggiungiLibro">Aggiungi un nuovo libro</a><br>
+    <a href="/utente/dettaglio">Dettagli profilo</a><br>
+    <form method="post" th:action="@{/utente/logout}">
+        <input type="submit" value="Logout">
+    </form>
+
+</body>
+</html>

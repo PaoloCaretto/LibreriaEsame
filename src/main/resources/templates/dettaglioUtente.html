@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dettaglio Utente</title>
+</head>
+<body>
+  <table>
+    <tr>
+      <td><b>Nome: </b></td>
+      <td th:text="${utente.nome}"></td>
+    </tr>
+    <tr>
+      <td><b>Cognome: </b></td>
+      <td th:text="${utente.cognome}"></td>
+    </tr>
+    <tr>
+      <td><b>Username: </b></td>
+      <td th:text="${utente.username}"></td>
+    </tr>
+    <tr>
+      <td><b>Password: </b></td>
+      <td th:text="${utente.password}"></td>
+    </tr>
+  </table>
+</body>
+</html>
